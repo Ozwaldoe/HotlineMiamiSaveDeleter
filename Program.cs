@@ -20,16 +20,13 @@ namespace Save_Deletor
         {
             string name = Environment.UserName;
 
-            while (true)
+            Process[] hotline = Process.GetProcessesByName("HotlineGL");
+            if (hotline.Length == 0)
             {
-                Process[] hotline = Process.GetProcessesByName("HotlineGL");
-                if (hotline.Length == 0)
-                {
-                    System.Threading.Thread.Sleep(500);
-                    File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami\SaveData.sav");
-                    Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
-                    break;
-                }
+                System.Threading.Thread.Sleep(500);
+                File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami\SaveData.sav");
+                Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
+
             }
         }
 
@@ -37,16 +34,12 @@ namespace Save_Deletor
         {
             string name = Environment.UserName;
 
-            while (true)
+            Process[] hotline = Process.GetProcessesByName("HotlineMiami2");
+            if (hotline.Length == 0)
             {
-                Process[] hotline = Process.GetProcessesByName("HotlineMiami2");
-                if (hotline.Length == 0)
-                {
-                    System.Threading.Thread.Sleep(500);
-                    File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami2\savedata.vfs");
-                    Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
-                    break;
-                }
+                System.Threading.Thread.Sleep(500);
+                File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami2\savedata.vfs");
+                Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
             }
         }
 
@@ -54,7 +47,7 @@ namespace Save_Deletor
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Made by Auzie#1557\n\n[1] Hotline Miami 1\n\n--------------------\n\n[2] Hotline Miami 2\n\n ");
+            Console.WriteLine("Made by Auzie#1557\n\n[1] Hotline Miami 1\n\n--------------------\n\n[2] Hotline Miami 2\n\nChoice >:");
             string version = Console.ReadLine();
             if (version == "1")
             {
