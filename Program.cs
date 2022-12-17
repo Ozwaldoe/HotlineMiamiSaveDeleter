@@ -25,10 +25,9 @@ namespace Save_Deletor
                 Process[] hotline = Process.GetProcessesByName("HotlineGL");
                 if (hotline.Length == 0)
                 {
-                    Thread.Sleep(2);
+                    System.Threading.Thread.Sleep(500);
                     File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami\SaveData.sav");
                     Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
-                    Thread.Sleep(2);
                     break;
                 }
             }
@@ -43,10 +42,9 @@ namespace Save_Deletor
                 Process[] hotline = Process.GetProcessesByName("HotlineMiami2");
                 if (hotline.Length == 0)
                 {
-                    Thread.Sleep(2);
+                    System.Threading.Thread.Sleep(500);
                     File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami2\savedata.vfs");
                     Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
-                    Thread.Sleep(2);
                     break;
                 }
             }
