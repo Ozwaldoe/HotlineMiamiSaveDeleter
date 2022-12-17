@@ -28,19 +28,21 @@ namespace Save_Deletor
                 Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
 
             }
+            else { Thread.Sleep(200); }
         }
 
         static void hm2_deleter()
         {
             string name = Environment.UserName;
 
-            Process[] hotline = Process.GetProcessesByName("HotlineMiami2");
-            if (hotline.Length == 0)
+            Process[] hotline2 = Process.GetProcessesByName("HotlineMiami2");
+            if (hotline2.Length == 0)
             {
-                System.Threading.Thread.Sleep(500);
+                System.Threading.Thread.Sleep(750);
                 File.Delete($@"C:\Users\{name}\Documents\My Games\HotlineMiami2\savedata.vfs");
                 Console.WriteLine($"Save Game Deleted || {DateTime.Now}");
             }
+            else { Thread.Sleep(200); }
         }
 
 
@@ -57,7 +59,7 @@ namespace Save_Deletor
             }
 
             }
-            else if (version == "2")
+            if (version == "2")
             {
                 Console.WriteLine("Selected Hotline 2");
                 while (true){
