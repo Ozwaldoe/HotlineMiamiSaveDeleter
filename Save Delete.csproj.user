@@ -3,9 +3,4 @@
   <PropertyGroup>
     <_LastSelectedProfileId>C:\Users\Administrator\source\repos\Save Delete\Save Delete\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  </ItemGroup>
 </Project>

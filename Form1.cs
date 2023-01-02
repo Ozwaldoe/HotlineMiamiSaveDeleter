@@ -17,7 +17,8 @@ namespace Save_Delete
 
         private void button2_Click(object sender, EventArgs e) // delete
         {
-            string steamshitpath = findPath.Remove(54);
+            int userName = Environment.UserName.Length;  
+            string steamshitpath = findPath.Remove(41 + userName);
             string steampathapi = steamshitpath + @"\steam_autocloud.vdf";
             File.Delete(steampathapi);
             File.Delete(findPath);
